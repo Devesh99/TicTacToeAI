@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="30dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="monospace"
+            android:freezesText="true"
+            android:text="Player :0"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/text_ai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/text_player"
+            android:fontFamily="monospace"
+            android:freezesText="true"
+            android:paddingLeft="60dp"
+            android:text="AI :0"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/text_turn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_ai"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:paddingLeft="16dp"
+            android:text="Select X to play first"
+            android:textSize="25sp" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:checkedButton="@+id/cross"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:text="X"
+                android:textSize="25dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="rbcross"
+                android:id="@+id/cross" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginBottom="30dp"
+                android:text="O"
+                android:textSize="25dp"
+                android:onClick="rbnaught"
+                android:id="@+id/naught" />
+        </RadioGroup>
+    </RelativeLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@drawable/grid"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:padding="5dp">
+        <ImageView
+            android:id="@+id/button_00"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"/>
+        <ImageView
+            android:id="@+id/button_01"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"/>
+        <ImageView
+            android:id="@+id/button_02"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:padding="15dp"
+            android:layout_columnWeight="1"
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"/>
+        <ImageView
+            android:id="@+id/button_10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:padding="15dp"
+            android:layout_columnWeight="1"
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"/>
+        <ImageView
+            android:id="@+id/button_11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:padding="15dp"
+            android:layout_columnWeight="1"
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"/>
+        <ImageView
+            android:id="@+id/button_12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:padding="15dp"
+            android:layout_columnWeight="1"
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"/>
+        <ImageView
+            android:id="@+id/button_20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:padding="15dp"
+            android:layout_columnWeight="1"
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"/>
+        <ImageView
+            android:id="@+id/button_21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:padding="15dp"
+            android:layout_columnWeight="1"
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"/>
+        <ImageView
+            android:id="@+id/button_22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:padding="15dp"
+            android:layout_columnWeight="1"
+            android:alpha="0"
+            android:scaleX="0"
+            android:scaleY="0"/>
+
+    </GridLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/button_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="35dp"
+            android:text="START"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/button_New_Game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="30dp"
+            android:text="NEW GAME"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+</LinearLayout>
